@@ -1,0 +1,22 @@
+Flohwalzer implementation on Tiva™ C Series TM4C123G LaunchPad Evaluation Board.
+
+Plays Flohwalzer (https://en.wikipedia.org/wiki/Flohwalzer) in forwards or backwards direction depending on the button pressed.
+
+******* Required Hardware I/O connections*******************
+play flohwalzer in forwards direction button connected to PE0
+play flohwalzer in backwards direction button connected to PE1
+8*R resistor DAC bit 0 on PB0 (least significant bit)
+4*R resistor DAC bit 1 on PB1
+2*R resistor DAC bit 2 on PB2
+1*R resistor DAC bit 3 on PB3 (most significant bit)
+
+Building requires Texas Instruments Code Composer Studio integrated development environment (IDE). Installation instructions on Linux follow.
+Download Linux single file installer from https://software-dl.ti.com/ccs/esd/CCSv11/CCS_11_0_0/exports/CCS11.0.0.00012_linux-x64.tar.gz
+
+wget https://software-dl.ti.com/ccs/esd/CCSv11/CCS_11_0_0/exports/CCS11.0.0.00012_linux-x64.tar.gz
+tar -xf CCS11.0.0.00012_linux-x64.tar.gz
+cd CCS11.0.0.00012_linux-x64
+Run installation wizard with:
+./ccs_setup_11.0.0.00012.run
+If installation wizard says there are missing dependencies, read http://software-dl.ti.com/ccs/esd/documents/ccsv10_linux_host_support.html, fix them and try installation wizard again.
+During installation, select "Custom Installation" and in component selection window select TM4C12x ARM Cortex-M4F core-based MCUs.
